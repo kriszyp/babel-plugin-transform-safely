@@ -1,4 +1,4 @@
-# babel-plugin-transform-alkali
+# babel-plugin-safely
 This babel plugin will transform expressions that use a `safely` keyword/call to produce safe property access and modification.
 
 ## Installation
