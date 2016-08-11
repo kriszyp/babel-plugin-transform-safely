@@ -9,14 +9,29 @@ $ npm install babel-plugin-safely
 
 ## Usage
 
-The basic format of using the transform is to write reactive expressions in the form:
+The basic format of using the transform is to write object-checked, safe expressions (existential property access) in the form:
 ```
 safely(expression)
 ```
-For example:
+We can then access properties on variables that may be set to null or undefined, and they won't error out. For example:
 ```
-safely(object.subObject.subProperty) // won't error out if object or subObject is null or undefined
+safely(object.subObject.subProperty) // will check for each object's existence before accessing property
+```
+Will be rewritten to:
+```
+var _object
+(_object = object == null ? void 0 : object.subObject) == null ? void 0 : _object.subProperty
+```
+And we can assign properties to objects thay may not exist yet, and they will be created:
+```
 safely(object.subObject.subProperty = 4) // will create the any missing objects in order to assign property
+```
+And we can make function or method calls on functions may or may not exist as well:
+```
+safely(object.method(args)) // will only call if method exists
+```
+And of course you can combine any permutation of the above.
+
 ## Transform Usage
 
 ### Via `.babelrc` (Recommended)
