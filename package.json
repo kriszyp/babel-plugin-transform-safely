@@ -1,0 +1,28 @@
+{
+  "dependencies": {},
+  "description": "Transform code for safe property access and modification",
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-helper-plugin-test-runner": "^6.8.0"
+  },
+  "directories": {},
+  "keywords": [
+    "babel-plugin"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "maintainers": [
+    {
+      "email": "kriszyp@gmail.com",
+      "name": "kriszyp"
+    }
+  ],
+  "name": "babel-plugin-safely",
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kriszyp/babel-plugin-transform-alkali/tree/master/babel-plugin-safely"
+  },
+  "scripts": {},
+  "version": "0.0.1"
+}
