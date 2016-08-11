@@ -19,6 +19,9 @@ var tests = {
   },
   funcExpr: function() {
     safely((obj && func)(3))
+  },
+  combo1: function() {
+    safely(empty.b = obj.foo.bar(func.c))
   }
 }
 var test
