@@ -42,7 +42,7 @@ object.arrayProperty.push('hi')
 ```
 If `arrayProperty` is not defined, an array will be created (and `push` called on it).
 
-And of course you can combine any permutation of the above:
+And of course you can combine any permutation of the above (with any other valid expression or operator):
 ```
 safely(empty.b.c = object[a]() || object[b](something.c.d))
 ```

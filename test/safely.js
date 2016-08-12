@@ -32,7 +32,7 @@ var tests = {
   }
 }
 var test
-for (let testName in tests) {
+for (var testName in tests) {
   var result = require("babel-core").transform('test=' + tests[testName].toString(), {
     plugins: ["transform-safely"]
   })
