@@ -36,6 +36,12 @@ safely(object.method(args)) // will only call if method exists
 ```
 Again, this will return `undefined` if the method doesn't exist.
 
+If you use a numeric index or the `push` or `unshift` method, the code will be transformed to create an array as necessary (rather than just doing an existence check). For example:
+```
+object.arrayProperty.push('hi')
+```
+If `arrayProperty` is not defined, an array will be created (and `push` called on it).
+
 And of course you can combine any permutation of the above:
 ```
 safely(empty.b.c = object[a]() || object[b](something.c.d))

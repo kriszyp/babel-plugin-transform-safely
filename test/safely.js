@@ -1,6 +1,7 @@
 var obj = {foo: 'bar'}
 var empty = null
 var func = null
+var maybeArray = null
 var tests = {
   basic: function() {
     console.assert(safely(empty.b.c) === undefined)
@@ -19,6 +20,12 @@ var tests = {
   },
   funcExpr: function() {
     safely((obj && func)(3))
+  },
+  numericAssignment: function() {
+    safely(maybeArray[0] = 'hi')
+  },
+  push: function() {
+    safely(maybeArray.subArray.push('hello'))
   },
   combo1: function() {
     safely(empty.b = obj.foo.bar(func.c))
