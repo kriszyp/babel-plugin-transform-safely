@@ -17,11 +17,11 @@
       "name": "kriszyp"
     }
   ],
-  "name": "babel-plugin-safely",
+  "name": "babel-plugin-transform-safely",
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kriszyp/babel-plugin-transform-alkali/tree/master/babel-plugin-safely"
+    "url": "https://github.com/kriszyp/babel-plugin-transform-alkali/tree/master/babel-plugin-transform-safely"
   },
   "scripts": {},
   "version": "0.0.1"

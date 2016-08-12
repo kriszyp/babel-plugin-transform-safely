@@ -1,10 +1,10 @@
-# babel-plugin-safely
+# babel-plugin-transform-safely
 This babel plugin will transform expressions that use a `safely` keyword/call to produce safe property access and modification.
 
 ## Installation
 
 ```sh
-$ npm install babel-plugin-safely
+$ npm install babel-plugin-transform-safely
 ```
 
 ## Usage

@@ -27,7 +27,7 @@ var tests = {
 var test
 for (let testName in tests) {
   var result = require("babel-core").transform('test=' + tests[testName].toString(), {
-    plugins: ["safely"]
+    plugins: ["transform-safely"]
   })
   console.log('transformed', result.code)
   eval(result.code)()
