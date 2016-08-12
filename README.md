@@ -22,14 +22,20 @@ Will be rewritten to:
 var _object
 (_object = object == null ? void 0 : object.subObject) == null ? void 0 : _object.subProperty
 ```
+So if `object` or `subObject` is not an object, the entire expression will return `undefined` (without an error).
+
 And we can assign properties to objects thay may not exist yet, and they will be created:
 ```
 safely(object.subObject.subProperty = 4) // will create the any missing objects in order to assign property
 ```
+If `object` or `subObject` are not objects, they will be assigned an object.
+
 And we can make function or method calls on functions may or may not exist as well:
 ```
 safely(object.method(args)) // will only call if method exists
 ```
+Again, this will return `undefined` if the method doesn't exist.
+
 And of course you can combine any permutation of the above:
 ```
 safely(empty.b.c = object[a]() || object[b](something.c.d))
@@ -43,20 +49,20 @@ safely(empty.b.c = object[a]() || object[b](something.c.d))
 
 ```json
 {
-  "plugins": ["safely"]
+  "plugins": ["transform-safely"]
 }
 ```
 
 ### Via CLI
 
 ```sh
-$ babel --plugins safely
+$ babel --plugins transform-safely
 ```
 
 ### Via Node API
 
 ```javascript
 require("babel-core").transform("code", {
-  plugins: ["safely"]
+  plugins: ["transform-safely"]
 });
 ```
