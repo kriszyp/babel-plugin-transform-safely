@@ -29,6 +29,11 @@ var tests = {
   },
   combo1: function() {
     safely(empty.b = obj.foo.bar(func.c))
+  },
+  arrow: function() {
+    return {
+      get: (row) => safely(row.SelectedOutcome.FieldType)
+    }
   }
 }
 var test
