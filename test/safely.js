@@ -34,6 +34,9 @@ var tests = {
     return {
       get: (row) => safely(row.SelectedOutcome.FieldType)
     }
+  },
+  thisAssignment: function() {
+    safely(this.obj['a'] ='b')
   }
 }
 var test
